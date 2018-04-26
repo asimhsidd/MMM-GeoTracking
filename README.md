@@ -4,7 +4,7 @@ A module of [MagicMirror²](https://github.com/MichMich/MagicMirror/) to live tr
 ## Using the module
 
 * Navigate to the modules directory via the follow command: `cd MagicMirror/modules`
-* Clone the module from github: `git clone https://github.com/asimhsidd/MMM-GeoTracking.git`
+* Clone the module from github: `git clone https://github.com/asimhsidd/-MMM-GeoTracking.git`
 * Navigate to the MMM-GeoTracking directory: `cd MMM-GeoTracking`
 * Install the dependencies: `npm install`
 * Add the following configuration to the modules array in the `config/config.js` file:
