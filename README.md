@@ -9,7 +9,6 @@ A module of [MagicMirror²](https://github.com/MichMich/MagicMirror/) to live tr
 * Install the dependencies: `npm install`
 * Add the following configuration to the modules array in the `config/config.js` file:
 ```js
-var config = {
     modules: [
         {
 			module: 'MMM-GeoTracking',
@@ -24,7 +23,6 @@ var config = {
 			}
         }
     ]
-}
 ```
 
 ## Configuration options for MMM-GeoTracking
