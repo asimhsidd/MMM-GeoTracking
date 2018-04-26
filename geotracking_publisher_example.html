@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Tracker For MMM-GeoTracking Module</title>
+	<script>
+		var pubnub = "", tracking = false, tracker = "";
+
+		setTimeout(function(){
+			  pubnub = new PubNub({
+				publishKey: '', // Input your publish key of pubnub
+				subscribeKey: '' // Input your subscriber key of pubnub. this is required regardless.
+			  });
+		},1000);
+
+		function updatePosition (position){
+			console.log(position);
+			pubnub.publish({
+				channel:"mmm-geotracker", 
+				message:{lat:position.coords.latitude, lng:position.coords.longitude}
+		   });
+		}
+		function CLICKED() {
+			if (!tracking){
+				if (navigator.geolocation) {
+					tracker = navigator.geolocation.watchPosition(updatePosition);
+					document.getElementsById('track').innerHTML = "Stop Tracking";
+					tracking = true;
+					return;
+				}else{
+					alert("Geolocation is not supported by this browser.");
+				}
+			}else{
+				navigator.geolocation.clearWatch(tracker);
+				tracking = false;
+				document.getElementsById('track').innerHTML = "Start Tracking";
+				return;
+			}
+		}	
+	</script>
+</head>
+<body>
+	<button type="button" onclick="CLICKED()" id="track">Start Tracking</button> 
+	<script src="scripts/index.js"></script>
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.19.0.min.js"></script>
+</body>
+</html>

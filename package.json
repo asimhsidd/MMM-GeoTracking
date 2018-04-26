@@ -1,0 +1,8 @@
+{
+  "name": "MMM-GeoTracking",
+  "version": "0.0.1",
+  "description": "Geo Tracking using Google Maps",
+  "main": "MMM-GeoTracking.js",
+  "author": "Asim Siddiqui",
+  "license": "MIT"
+}
