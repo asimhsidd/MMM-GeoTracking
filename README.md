@@ -1,6 +1,8 @@
 # MMM-GeoTracking
 A module of [MagicMirror²](https://github.com/MichMich/MagicMirror/) to live track a moving object on the map. This continuously listens to a pubnub channel where the publisher (example file attached) has to publish the new location (lat,lon) as and when moves.
 
+![picture](Capture.JPG)
+
 ## Using the module
 
 * Navigate to the modules directory via the follow command: `cd MagicMirror/modules`
